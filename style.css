@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=DM+Mono&family=Inter:wght@400;600;700&family=Montserrat:wght@400;500&family=Poppins:wght@200;300&family=Quicksand:wght@300&family=Secular+One&family=Splash&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Combo', cursive;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./img/bigben.jpg');
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+#textToTranslate {
+    width: 80%;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#insertWord {
+    width: 80%;
+    height: 40px;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+
+#btn {
+    background-color: green;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    width: 60px;
+    height: 20px;
+    margin-top: 40px;
+}
+
+#isCOrrect {
+    color: white;
+    font-size: 25px;
+}
+
+#correctAnswers {
+    color: white;
+    font-size: 25px;
+}
