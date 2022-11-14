@@ -5,11 +5,48 @@ const insertWord = document.getElementById('insertWord');
 const btn = document.getElementById('btn');
 const isCorrect = document.getElementById('isCorrect');
 const correctAnswers = document.getElementById('correctAnswers');
+const hiddentext = document.getElementById('hiddentext');
+const showMeBtn = document.getElementById('showMeBtn');
 
 let correctAnswer = 0;
 let idWord = 0
 
 
+function setWord(idWord) {
+    data.forEach(item => {
+        if (item.id == idWord) {
+            textToTranslate.textContent = item.translating;
+        }
+    })
+}
+
+btn.addEventListener('click', () => {
+    data.forEach(item => {
+        if (item.id == idWord) {
+            if (insertWord.value == item.word) {
+                correctAnswer += 1;
+                isCorrect.textContent = "Poprawna odpowiedź";
+                idWord += 1;
+                console.log(idWord);
+                console.log(correctAnswer);
+                correctAnswers.textContent = correctAnswer;
+                setWord(idWord)
+                insertWord.textContent = '';
+            }
+
+        }
+    })
+
+})
+showMeBtn.addEventListener('click', () => {
+    data.forEach(item => {
+        if (item.id == idWord) {
+            hiddentext.textContent = item.word
+        }
+    })
+})
+setWord(idWord);
+/*
 btn.addEventListener('click', () => {
     data.forEach(item => {
         if (item.id == idWord) {
@@ -26,3 +63,4 @@ btn.addEventListener('click', () => {
         }
     })
 })
+*/
