@@ -70,3 +70,11 @@
     color: white;
     font-size: 30px;
 }
+
+@media screen and (max-width: 738px) {
+    #btn {
+        width: 80%;
+        height: 16%;
+        margin-top: 40px;
+    }
+}
