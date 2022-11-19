@@ -7,10 +7,15 @@ const isCorrect = document.getElementById('isCorrect');
 const correctAnswers = document.getElementById('correctAnswers');
 const hiddentext = document.getElementById('hiddentext');
 const showMeBtn = document.getElementById('showMeBtn');
+const fallAnswers = document.getElementById('fallAnswers')
 
+let falls = 0;
 let correctAnswer = 0;
 let idWord = 0
 
+function getTimestampInSeconds() {
+    return Math.floor(Date.now() / 1000)
+}
 
 function setWord(idWord) {
     data.forEach(item => {
@@ -30,8 +35,14 @@ btn.addEventListener('click', () => {
                 console.log(idWord);
                 console.log(correctAnswer);
                 correctAnswers.textContent = correctAnswer;
-                setWord(idWord)
-                insertWord.textContent = '';
+                if (idWord > 122) {
+                    const timeOnStop = getTimestampInSeconds();
+                    const time = timeOnStop - timeOnStart;
+                    alert(time / 60)
+                } else {
+                    setWord(idWord)
+                    insertWord.textContent = '';
+                }
             }
 
         }
@@ -44,8 +55,13 @@ showMeBtn.addEventListener('click', () => {
             hiddentext.textContent = item.word
         }
     })
+    falls += 1;
+    fallAnswers.textContent = falls;
 })
+
+const timeOnStart = getTimestampInSeconds();
 setWord(idWord);
+
 /*
 btn.addEventListener('click', () => {
     data.forEach(item => {

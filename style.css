@@ -10,6 +10,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url('./img/bigben.jpg');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -54,6 +55,12 @@
 #correctAnswers {
     color: white;
     font-size: 25px;
+}
+
+#fallAnswers {
+    color: red;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 #showMeBtn {

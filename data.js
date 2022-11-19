@@ -243,4 +243,374 @@ export default [{
         word: 'winding river',
         translating: 'kręta rzek'
     },
+    {
+        id: 49,
+        word: 'capital city',
+        translating: 'stolica'
+    },
+    {
+        id: 50,
+        word: 'continent',
+        translating: 'kontynent'
+    },
+    {
+        id: 51,
+        word: 'country',
+        translating: 'kraj'
+    },
+    {
+        id: 52,
+        word: 'economic growth',
+        translating: 'wzrost gospodarczy'
+    },
+    {
+        id: 53,
+        word: 'expand',
+        translating: 'powiększyć, rozbudować'
+    },
+    {
+        id: 54,
+        word: 'inhabitant',
+        translating: 'mieszkaniec'
+    },
+    {
+        id: 55,
+        word: 'innovation',
+        translating: 'innowacja'
+    },
+    {
+        id: 56,
+        word: 'locate',
+        translating: 'usytuować'
+    },
+    {
+        id: 57,
+        word: 'megacity',
+        translating: 'megamiasto'
+    },
+    {
+        id: 58,
+        word: 'population',
+        translating: 'liczba ludności'
+    },
+    {
+        id: 59,
+        word: 'poverty',
+        translating: 'ubóstwo'
+    },
+    {
+        id: 60,
+        word: 'predict',
+        translating: 'przepowiadać, przewidywać'
+    },
+    {
+        id: 61,
+        word: 'production',
+        translating: 'produkcja'
+    },
+    {
+        id: 62,
+        word: 'provide',
+        translating: 'dostarczać'
+    },
+    {
+        id: 63,
+        word: 'vertical',
+        translating: 'pionowy'
+    },
+    {
+        id: 64,
+        word: 'affect',
+        translating: 'dotyczyć, dotykać'
+    },
+    {
+        id: 65,
+        word: 'air quality',
+        translating: 'jakość powietrza'
+    },
+    {
+        id: 66,
+        word: 'bicycle rack',
+        translating: 'stojak na rowery'
+    },
+    {
+        id: 67,
+        word: 'climate',
+        translating: 'klimat'
+    },
+    {
+        id: 68,
+        word: 'climate change',
+        translating: 'zmiana klimatu'
+    },
+    {
+        id: 69,
+        word: 'electricity',
+        translating: 'elektryczność'
+    },
+    {
+        id: 70,
+        word: 'environment',
+        translating: 'środowisko naturalne'
+    },
+    {
+        id: 71,
+        word: 'environmental issues',
+        translating: 'zagadnienia związane ze środowiskiem'
+    },
+    {
+        id: 72,
+        word: 'gadget',
+        translating: 'gadżet'
+    },
+    {
+        id: 73,
+        word: 'global warming',
+        translating: 'globalne ocieplenie'
+    },
+    {
+        id: 74,
+        word: 'in the school grounds',
+        translating: 'na terenie szkoły'
+    },
+    {
+        id: 75,
+        word: 'low-energy light bulb',
+        translating: 'żarówka energooszczędna'
+    },
+    {
+        id: 76,
+        word: 'organic',
+        translating: 'ekologiczny'
+    },
+    {
+        id: 77,
+        word: 'recycle',
+        translating: 'przetwarzać, ponownie wykorzystywać'
+    },
+    {
+        id: 78,
+        word: 'recycling bin',
+        translating: 'pojemnik do segregacji odpadów'
+    },
+    {
+        id: 79,
+        word: 'renewable energy',
+        translating: 'energia odnawialna'
+    },
+    {
+        id: 80,
+        word: 'save electricity',
+        translating: 'oszczędzać energię elektryczną'
+    },
+    {
+        id: 81,
+        word: 'solar panels',
+        translating: 'panele słoneczne'
+    },
+    {
+        id: 82,
+        word: 'backpack',
+        translating: 'plecak'
+    },
+    {
+        id: 83,
+        word: 'bear',
+        translating: 'niedźwiedź'
+    },
+    {
+        id: 84,
+        word: 'bear encounter',
+        translating: 'spotkanie z niedźwiedziem'
+    },
+    {
+        id: 85,
+        word: 'bee',
+        translating: 'pszczoła'
+    },
+    {
+        id: 86,
+        word: 'branch',
+        translating: 'gałąź'
+    },
+    {
+        id: 87,
+        word: 'clearing',
+        translating: 'polana'
+    },
+    {
+        id: 88,
+        word: 'come face to face with',
+        translating: 'stanąć twarzą w twarz z'
+    },
+    {
+        id: 89,
+        word: 'cub',
+        translating: 'młode'
+    },
+    {
+        id: 90,
+        word: 'defend',
+        translating: 'bronić się'
+    },
+    {
+        id: 91,
+        word: 'die from',
+        translating: 'umrzeć z powodu'
+    },
+    {
+        id: 92,
+        word: 'flashlight',
+        translating: 'latarka'
+    },
+    {
+        id: 93,
+        word: 'fox',
+        translating: 'lis'
+    },
+    {
+        id: 94,
+        word: 'go off',
+        translating: 'zepsuć się'
+    },
+    {
+        id: 95,
+        word: 'gorge yourself',
+        translating: 'objadać się'
+    },
+    {
+        id: 96,
+        word: 'hedgehog',
+        translating: 'jeż'
+    },
+    {
+        id: 97,
+        word: 'in the bushes',
+        translating: 'w krzakach'
+    },
+    {
+        id: 98,
+        word: 'insect repellent',
+        translating: 'środek przeciw owadom'
+    },
+    {
+        id: 99,
+        word: 'leaves',
+        translating: 'liście'
+    },
+    {
+        id: 100,
+        word: 'nail clippers',
+        translating: 'obcinacz do paznokci'
+    },
+    {
+        id: 101,
+        word: 'pancake',
+        translating: 'naleśnik'
+    },
+    {
+        id: 102,
+        word: 'path',
+        translating: 'ścieżka'
+    },
+    {
+        id: 103,
+        word: 'pepper spray',
+        translating: 'gaz pieprzowy'
+    },
+    {
+        id: 104,
+        word: 'pitch black',
+        translating: 'zupełnie ciemno'
+    },
+    {
+        id: 105,
+        word: 'pond',
+        translating: 'staw'
+    },
+    {
+        id: 106,
+        word: 'predator',
+        translating: 'drapieżnik'
+    },
+    {
+        id: 107,
+        word: 'pray',
+        translating: 'ofiara'
+    },
+    {
+        id: 108,
+        word: 'reach for',
+        translating: 'sięgać po'
+    },
+    {
+        id: 109,
+        word: 'root',
+        translating: 'korzeń'
+    },
+    {
+        id: 110,
+        word: 'search through',
+        translating: 'przetrząsać'
+    },
+    {
+        id: 111,
+        word: 'sharp knife',
+        translating: 'ostry nóż'
+    },
+    {
+        id: 112,
+        word: 'sit around',
+        translating: 'siedzieć bezczynnie'
+    },
+    {
+        id: 113,
+        word: 'skunk',
+        translating: 'skunks'
+    },
+    {
+        id: 114,
+        word: 'sleep through',
+        translating: 'przespać coś'
+    },
+    {
+        id: 115,
+        word: 'sleeping bag',
+        translating: 'śpiwór'
+    },
+    {
+        id: 116,
+        word: 'snore',
+        translating: 'chrapać'
+    },
+    {
+        id: 117,
+        word: 'spring',
+        translating: 'źródło'
+    },
+    {
+        id: 118,
+        word: 'squirrel',
+        translating: 'wiewiórka'
+    },
+    {
+        id: 119,
+        word: 'store food',
+        translating: 'przechowywać jedzenie'
+    },
+    {
+        id: 120,
+        word: 'sunscreen',
+        translating: 'filtr przeciwsłoneczny'
+    },
+    {
+        id: 121,
+        word: 'trail',
+        translating: 'szlak'
+    },
+    {
+        id: 122,
+        word: 'trunk',
+        translating: 'pień'
+    },
 ]
