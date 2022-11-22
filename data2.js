@@ -155,6 +155,10 @@ export default [{
     word: 'instant communication',
     translating: 'komunikacja natychmiastowa'
 }, {
+    id: 39,
+    word: 'instant communication',
+    translating: 'komunikacja natychmiastowa'
+}, {
     id: 40,
     word: 'local handicrafts',
     translating: 'lokalne rzemiosło artystyczne'
