@@ -5,6 +5,8 @@
     --englishRed: #d83133;
     --englishBlue: #0065c3;
     --white: #fff;
+    --germanyYellow: rgb(255, 217, 0);
+    --germanyGreen: rgb(14, 163, 0);
 }
 
 * {
@@ -69,13 +71,26 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--englishBlue);
+    /*background-color: var(--englishBlue);*/
     clip-path: circle(140px at center);
     transition: 0.5s;
 }
 
-.card:hover .circle:before {
+#english .englishCircle::before {
+    background-color: var(--englishBlue);
+}
+
+#germany .germanyCircle::before {
+    background-color: var(--germanyGreen);
+}
+
+#english:hover .circle:before {
     background-color: var(--englishRed);
+    clip-path: circle(400px at center);
+}
+
+#germany:hover .circle:before {
+    background-color: var(--germanyYellow);
     clip-path: circle(400px at center);
 }
 
