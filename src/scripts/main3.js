@@ -19,16 +19,16 @@ function getTimestampInSeconds() {
 
 function setWord(idWord) {
     data.forEach(item => {
-        if (item.words.id == idWord) {
-            textToTranslate.textContent = item.words.translating;
+        if (item.id == idWord) {
+            textToTranslate.textContent = item.translating;
         }
     })
 }
 
 btn.addEventListener('click', () => {
     data.forEach(item => {
-        if (item.words.id == idWord) {
-            if (insertWord.value == item.words.word) {
+        if (item.id == idWord) {
+            if (insertWord.value == item.word) {
                 correctAnswer += 1;
                 isCorrect.textContent = "Poprawna odpowiedź";
                 idWord += 1;
@@ -51,8 +51,8 @@ btn.addEventListener('click', () => {
 })
 showMeBtn.addEventListener('click', () => {
     data.forEach(item => {
-        if (item.words.id == idWord) {
-            hiddentext.textContent = item.words.word
+        if (item.id == idWord) {
+            hiddentext.textContent = item.word
         }
     })
     falls += 1;
