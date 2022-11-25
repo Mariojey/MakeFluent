@@ -1,12 +1,12 @@
-import data from './data.js'
+import data from '../data/data3.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
-const btnLearn1 = document.getElementById('btnLearn1');
+const btn = document.getElementById('btn');
 const isCorrect = document.getElementById('isCorrect');
 const correctAnswers = document.getElementById('correctAnswers');
 const hiddentext = document.getElementById('hiddentext');
-const showMeBtnLearn1 = document.getElementById('showMeBtnLearn1');
+const showMeBtn = document.getElementById('showMeBtn');
 const fallAnswers = document.getElementById('fallAnswers')
 
 let falls = 0;
@@ -19,16 +19,16 @@ function getTimestampInSeconds() {
 
 function setWord(idWord) {
     data.forEach(item => {
-        if (item.id == idWord) {
-            textToTranslate.textContent = item.translating;
+        if (item.words.id == idWord) {
+            textToTranslate.textContent = item.words.translating;
         }
     })
 }
 
-btnLearn1.addEventListener('click', () => {
+btn.addEventListener('click', () => {
     data.forEach(item => {
-        if (item.id == idWord) {
-            if (insertWord.value == item.word) {
+        if (item.words.id == idWord) {
+            if (insertWord.value == item.words.word) {
                 correctAnswer += 1;
                 isCorrect.textContent = "Poprawna odpowiedź";
                 idWord += 1;
@@ -49,17 +49,15 @@ btnLearn1.addEventListener('click', () => {
     })
 
 })
-
-showMeBtnLearn1.addEventListener('click', () => {
+showMeBtn.addEventListener('click', () => {
     data.forEach(item => {
-        if (item.id == idWord) {
-            hiddentext.textContent = item.word
+        if (item.words.id == idWord) {
+            hiddentext.textContent = item.words.word
         }
     })
     falls += 1;
     fallAnswers.textContent = falls;
 })
-
 
 const timeOnStart = getTimestampInSeconds();
 setWord(idWord);
@@ -77,7 +75,6 @@ btn.addEventListener('click', () => {
                 console.log(correctAnswer);
                 correctAnswers.textContent = correctAnswer;
             }
-
         }
     })
 })

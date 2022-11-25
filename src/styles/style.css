@@ -9,7 +9,7 @@
 .main {
     width: 100vw;
     height: 100vh;
-    background-image: url('./img/bigben.jpg');
+    background-image: url('/img/bigben.jpg');
     background-size: cover;
     display: flex;
     flex-direction: column;
