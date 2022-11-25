@@ -2,11 +2,11 @@ import data from './data.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
-const btn = document.getElementById('btn');
+const btnLearn1 = document.getElementById('btnLearn1');
 const isCorrect = document.getElementById('isCorrect');
 const correctAnswers = document.getElementById('correctAnswers');
 const hiddentext = document.getElementById('hiddentext');
-const showMeBtn = document.getElementById('showMeBtn');
+const showMeBtnLearn1 = document.getElementById('showMeBtnLearn1');
 const fallAnswers = document.getElementById('fallAnswers')
 
 let falls = 0;
@@ -25,7 +25,7 @@ function setWord(idWord) {
     })
 }
 
-btn.addEventListener('click', () => {
+btnLearn1.addEventListener('click', () => {
     data.forEach(item => {
         if (item.id == idWord) {
             if (insertWord.value == item.word) {
@@ -49,7 +49,8 @@ btn.addEventListener('click', () => {
     })
 
 })
-showMeBtn.addEventListener('click', () => {
+
+showMeBtnLearn1.addEventListener('click', () => {
     data.forEach(item => {
         if (item.id == idWord) {
             hiddentext.textContent = item.word
@@ -58,6 +59,7 @@ showMeBtn.addEventListener('click', () => {
     falls += 1;
     fallAnswers.textContent = falls;
 })
+
 
 const timeOnStart = getTimestampInSeconds();
 setWord(idWord);

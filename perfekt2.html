@@ -25,28 +25,25 @@
             <span class="titleLetter">n</span>
             <span class="titleLetter">t</span>
         </header>
-        <section class="listOfBooks">
-            <div class="card" id="english">
-                <div class="circle englishCircle"></div>
-                <div class="cardContent englishContent">
-                    <h2>Angielski</h2>
-                    <p>Powtarzanie słówek z działu 5 - Planeta Ziemia. Vocabulary, Reading, Listening, sprawdź swój zakres słownictwa</p>
-                    <a href="learn.html">SPRAWDŹ</a>
+        <section class="listOfChapters">
+            <div class="chapter">
+                <div class="imgChapter">
+                    <img src="./img/medicine1.jpg" alt="">
                 </div>
-                <img src="img/focus3.jpg" alt="Zdjęcie podręcznika do angielskiego">
-            </div>
-            <div class="card" id="germany">
-                <div class="circle germanyCircle"></div>
-                <div class="cardContent germanyContent">
-                    <h2>Niemiecki</h2>
-                    <p>Powtarzanie słówek z działu 5 - Zdrowie. Beschwerden und Krankenheith, Beim Arzt,Medikamente,Sei vorsichtig, sprawdź swój zakres słownictwa</p>
-                    <a href="perfekt2.html">SPRAWDŹ</a>
+                <div class="contentChapter">
+                    <h2>In der Apotheke</h2>
+                    <a href="learn2.html" class="chapterBtn">SŁÓWKA</a>
                 </div>
-                <img src="img/perfekt2.jpg" alt="Zdjęcie podręcznika do angielskiego">
             </div>
         </section>
     </main>
-
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".chapter"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
 </body>
 
 </html>

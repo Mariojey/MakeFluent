@@ -37,7 +37,7 @@
     border-radius: 10px;
 }
 
-#btn {
+.btn {
     background-color: green;
     color: white;
     border: 0.5px solid black;
@@ -63,7 +63,7 @@
     margin-top: 20px;
 }
 
-#showMeBtn {
+.showMeBtn {
     background-color: yellowgreen;
     color: white;
     border: 0.5px solid black;
