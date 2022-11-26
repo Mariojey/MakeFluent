@@ -1,4 +1,4 @@
-import data from '../data/data2.js'
+import data from '../../data/data2.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
