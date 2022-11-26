@@ -1,4 +1,4 @@
-import data from '../data/data3.js'
+import data from '../../data/data.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
@@ -49,6 +49,7 @@ btn.addEventListener('click', () => {
     })
 
 })
+
 showMeBtn.addEventListener('click', () => {
     data.forEach(item => {
         if (item.id == idWord) {
@@ -58,6 +59,7 @@ showMeBtn.addEventListener('click', () => {
     falls += 1;
     fallAnswers.textContent = falls;
 })
+
 
 const timeOnStart = getTimestampInSeconds();
 setWord(idWord);
@@ -75,6 +77,7 @@ btn.addEventListener('click', () => {
                 console.log(correctAnswer);
                 correctAnswers.textContent = correctAnswer;
             }
+
         }
     })
 })
