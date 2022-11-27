@@ -1,3 +1,18 @@
+/*
+=====================================
+|
+|
+| SCRIPT ONLY FOR TESTING
+| Correct script for that in ../scripts/index.js
+| Created By Mariojey
+|
+|
+|
+|
+|
+|
+=====================================
+*/
 import data from '../../data/data2.js'
 
 const textToTranslate = document.getElementById('textToTranslate');

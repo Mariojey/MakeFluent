@@ -1,4 +1,19 @@
-import data from './data3.js'
+/*
+=====================================
+|
+|
+| SCRIPT ONLY FOR TESTING
+| Correct script for that in ../scripts/index.js
+| Created By Mariojey
+|
+|
+|
+|
+|
+|
+=====================================
+*/
+import data from '../../data/data3.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
