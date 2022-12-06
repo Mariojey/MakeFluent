@@ -1,5 +1,6 @@
 import dataEnglish from '../data/data2.js'
 import dataGermany from '../data/data3.js'
+import dataEnglishHealthVocabulary from '../data/health.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
@@ -16,12 +17,15 @@ let falls = 0;
 let correctAnswer = 0;
 let idWord = 0
 
+const hasHealthVocabulary = new URLSearchParams(window.location.search).get("vocabulary");
+console.log(hasHealthVocabulary);
+
 function getTimestampInSeconds() {
     return Math.floor(Date.now() / 1000)
 }
 
-function setEnglishWord(idWord) {
-    dataEnglish.forEach(item => {
+function setEnglishWord(idWord, database) {
+    database.forEach(item => {
         if (item.id == idWord) {
             textToTranslate.textContent = item.translating;
         }
@@ -35,85 +39,126 @@ function setGermanyWord(idWord) {
         }
     })
 }
-if (btnGermany) {
-    console.log('Hi');
-    btnGermany.addEventListener('click', () => {
-        dataGermany.forEach(item => {
-            if (item.id == idWord) {
-                if (insertWord.value == item.word) {
-                    correctAnswer += 1;
-                    isCorrect.textContent = "Poprawna odpowiedź";
-                    idWord += 1;
-                    console.log(idWord);
-                    console.log(correctAnswer);
-                    correctAnswers.textContent = correctAnswer;
-                    if (idWord > 122) {
-                        const timeOnStop = getTimestampInSeconds();
-                        const time = timeOnStop - timeOnStart;
-                        alert(time / 60)
-                    } else {
-                        setGermanyWord(idWord)
-                        insertWord.textContent = '';
+if (hasHealthVocabulary) {
+    if (btnEnglish) {
+        console.log('hi');
+        btnEnglish.addEventListener('click', () => {
+            dataEnglishHealthVocabulary.forEach(item => {
+                if (item.id == idWord) {
+                    if (insertWord.value == item.word) {
+                        correctAnswer += 1;
+                        isCorrect.textContent = "Poprawna odpowiedź";
+                        idWord += 1;
+                        console.log(idWord);
+                        console.log(correctAnswer);
+                        correctAnswers.textContent = correctAnswer;
+                        if (idWord > 122) {
+                            const timeOnStop = getTimestampInSeconds();
+                            const time = timeOnStop - timeOnStart;
+                            alert(time / 60)
+                        } else {
+                            setEnglishWord(idWord, dataEnglishHealthVocabulary)
+                            insertWord.textContent = '';
+                        }
                     }
+
                 }
+            })
 
-            }
+        })
+        showMeBtn.addEventListener('click', () => {
+            dataEnglishHealthVocabulary.forEach(item => {
+                if (item.id == idWord) {
+                    hiddentext.textContent = item.word
+                }
+            })
+            falls += 1;
+            fallAnswers.textContent = falls;
         })
 
-    })
-    showMeBtn.addEventListener('click', () => {
-        dataGermany.forEach(item => {
-            if (item.id == idWord) {
-                hiddentext.textContent = item.word
-            }
-        })
-        falls += 1;
-        fallAnswers.textContent = falls;
-    })
-
-    const timeOnStart = getTimestampInSeconds();
-    setGermanyWord(idWord)
-}
-if (btnEnglish) {
-    console.log('hi');
-    btnEnglish.addEventListener('click', () => {
-        dataEnglish.forEach(item => {
-            if (item.id == idWord) {
-                if (insertWord.value == item.word) {
-                    correctAnswer += 1;
-                    isCorrect.textContent = "Poprawna odpowiedź";
-                    idWord += 1;
-                    console.log(idWord);
-                    console.log(correctAnswer);
-                    correctAnswers.textContent = correctAnswer;
-                    if (idWord > 122) {
-                        const timeOnStop = getTimestampInSeconds();
-                        const time = timeOnStop - timeOnStart;
-                        alert(time / 60)
-                    } else {
-                        setEnglishWord(idWord)
-                        insertWord.textContent = '';
+        const timeOnStart = getTimestampInSeconds();
+        setEnglishWord(idWord, dataEnglishHealthVocabulary)
+    }
+} else {
+    if (btnGermany) {
+        console.log('Hi');
+        btnGermany.addEventListener('click', () => {
+            dataGermany.forEach(item => {
+                if (item.id == idWord) {
+                    if (insertWord.value == item.word) {
+                        correctAnswer += 1;
+                        isCorrect.textContent = "Poprawna odpowiedź";
+                        idWord += 1;
+                        console.log(idWord);
+                        console.log(correctAnswer);
+                        correctAnswers.textContent = correctAnswer;
+                        if (idWord > 122) {
+                            const timeOnStop = getTimestampInSeconds();
+                            const time = timeOnStop - timeOnStart;
+                            alert(time / 60)
+                        } else {
+                            setGermanyWord(idWord)
+                            insertWord.textContent = '';
+                        }
                     }
+
                 }
+            })
 
-            }
+        })
+        showMeBtn.addEventListener('click', () => {
+            dataGermany.forEach(item => {
+                if (item.id == idWord) {
+                    hiddentext.textContent = item.word
+                }
+            })
+            falls += 1;
+            fallAnswers.textContent = falls;
         })
 
-    })
-    showMeBtn.addEventListener('click', () => {
-        dataEnglish.forEach(item => {
-            if (item.id == idWord) {
-                hiddentext.textContent = item.word
-            }
-        })
-        falls += 1;
-        fallAnswers.textContent = falls;
-    })
+        const timeOnStart = getTimestampInSeconds();
+        setGermanyWord(idWord)
+    }
+    if (btnEnglish) {
+        console.log('hi');
+        btnEnglish.addEventListener('click', () => {
+            dataEnglish.forEach(item => {
+                if (item.id == idWord) {
+                    if (insertWord.value == item.word) {
+                        correctAnswer += 1;
+                        isCorrect.textContent = "Poprawna odpowiedź";
+                        idWord += 1;
+                        console.log(idWord);
+                        console.log(correctAnswer);
+                        correctAnswers.textContent = correctAnswer;
+                        if (idWord > 122) {
+                            const timeOnStop = getTimestampInSeconds();
+                            const time = timeOnStop - timeOnStart;
+                            alert(time / 60)
+                        } else {
+                            setEnglishWord(idWord, dataEnglish)
+                            insertWord.textContent = '';
+                        }
+                    }
 
-    const timeOnStart = getTimestampInSeconds();
-    setEnglishWord(idWord)
+                }
+            })
+
+        })
+        showMeBtn.addEventListener('click', () => {
+            dataEnglish.forEach(item => {
+                if (item.id == idWord) {
+                    hiddentext.textContent = item.word
+                }
+            })
+            falls += 1;
+            fallAnswers.textContent = falls;
+        })
+
+        const timeOnStart = getTimestampInSeconds();
+        setEnglishWord(idWord, dataEnglish)
+    }
 }
-
 
 /*
 btn.addEventListener('click', () => {
