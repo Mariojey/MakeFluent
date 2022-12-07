@@ -17,7 +17,10 @@ let falls = 0;
 let correctAnswer = 0;
 let idWord = 0
 
-const hasHealthVocabulary = new URLSearchParams(window.location.search).get("vocabulary");
+const hasHealthVocabulary = new URLSearchParams(window.location.search).get("EnglishHealthVocabulary");
+const hasEarthVocabulary = new URLSearchParams(window.location.search).get("EnglishEarthVocabulary");
+const hasMedikamentVocabulary = new URLSearchParams(window.location.search).get("GermanyHealthVocabulary");
+
 console.log(hasHealthVocabulary);
 
 function getTimestampInSeconds() {
@@ -32,8 +35,8 @@ function setEnglishWord(idWord, database) {
     })
 }
 
-function setGermanyWord(idWord) {
-    dataGermany.forEach(item => {
+function setGermanyWord(idWord, database) {
+    database.forEach(item => {
         if (item.id == idWord) {
             textToTranslate.textContent = item.translating;
         }
@@ -79,7 +82,8 @@ if (hasHealthVocabulary) {
         const timeOnStart = getTimestampInSeconds();
         setEnglishWord(idWord, dataEnglishHealthVocabulary)
     }
-} else {
+}
+if (hasMedikamentVocabulary) {
     if (btnGermany) {
         console.log('Hi');
         btnGermany.addEventListener('click', () => {
@@ -97,7 +101,7 @@ if (hasHealthVocabulary) {
                             const time = timeOnStop - timeOnStart;
                             alert(time / 60)
                         } else {
-                            setGermanyWord(idWord)
+                            setGermanyWord(idWord, dataGermany)
                             insertWord.textContent = '';
                         }
                     }
@@ -117,8 +121,10 @@ if (hasHealthVocabulary) {
         })
 
         const timeOnStart = getTimestampInSeconds();
-        setGermanyWord(idWord)
+        setGermanyWord(idWord, dataGermany)
     }
+}
+if (hasEarthVocabulary) {
     if (btnEnglish) {
         console.log('hi');
         btnEnglish.addEventListener('click', () => {
