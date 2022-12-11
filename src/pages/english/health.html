@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<script src="main.js" type="module" defer></script>-->
     <link rel="stylesheet" href="../../styles/index.css">
+
     <title>MakeFluent</title>
 </head>
 
 <body>
     <main class="main">
+        <!--
         <header class="header">
             <span class="titleLetter">M</span>
             <span class="titleLetter">a</span>
@@ -25,8 +27,9 @@
             <span class="titleLetter">n</span>
             <span class="titleLetter">t</span>
         </header>
+        -->
         <section class="listOfChapters">
-            <div class="cardChapter">
+            <div class="cardChapter" id="cardChapterEnglishHealthVocabulary">
                 <div class="iconChapter">
                     <i class="icon-codeChapter"></i>
                 </div>
@@ -35,14 +38,19 @@
                     <a href="./health/vocabulary.html?EnglishHealthVocabulary=true">SPRAWDŹ</a>
                 </div>
             </div>
+            <div class="cardChapter" id="cardChapterEnglishHealthVocabulary">
+                <div class="iconChapter">
+                    <i class="icon-codeChapter"></i>
+                </div>
+                <div class="contentChapter">
+                    <p>Grammar - Vocabulary</p>
+                    <a href="./health/vocabulary.html?EnglishHealthGrammar=true">SPRAWDŹ</a>
+                </div>
+            </div>
         </section>
     </main>
-    <script type="text/javascript" src="../../scripts/vanilla-tilt.js"></script>
+    <!--<script type="text/javascript" src="../../scripts/vanilla-tilt.js"></script>-->
     <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".chapter"), {
-            max: 25,
-            speed: 400
-        });
     </script>
 </body>
 

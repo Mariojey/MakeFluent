@@ -1,6 +1,7 @@
 import dataEnglish from '../data/data2.js'
 import dataGermany from '../data/data3.js'
 import dataEnglishHealthVocabulary from '../data/health.js'
+import dataEnglishHealthGrammar from '../data/grammar.health.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
@@ -18,6 +19,7 @@ let correctAnswer = 0;
 let idWord = 0
 
 const hasHealthVocabulary = new URLSearchParams(window.location.search).get("EnglishHealthVocabulary");
+const hasHealthGrammar = new URLSearchParams(window.location.search).get("EnglishHealthGrammar");
 const hasEarthVocabulary = new URLSearchParams(window.location.search).get("EnglishEarthVocabulary");
 const hasMedikamentVocabulary = new URLSearchParams(window.location.search).get("GermanyHealthVocabulary");
 
@@ -81,6 +83,48 @@ if (hasHealthVocabulary) {
 
         const timeOnStart = getTimestampInSeconds();
         setEnglishWord(idWord, dataEnglishHealthVocabulary)
+    }
+}
+//HEALTH - GRAMMAR
+if (hasHealthGrammar) {
+    if (btnEnglish) {
+        console.log('hi');
+        btnEnglish.addEventListener('click', () => {
+            dataEnglishHealthGrammar.forEach(item => {
+                if (item.id == idWord) {
+                    if (insertWord.value == item.word) {
+                        correctAnswer += 1;
+                        isCorrect.textContent = "Poprawna odpowiedź";
+                        idWord += 1;
+                        console.log(idWord);
+                        console.log(correctAnswer);
+                        correctAnswers.textContent = correctAnswer;
+                        if (idWord > 122) {
+                            const timeOnStop = getTimestampInSeconds();
+                            const time = timeOnStop - timeOnStart;
+                            alert(time / 60)
+                        } else {
+                            setEnglishWord(idWord, dataEnglishHealthGrammar)
+                            insertWord.textContent = '';
+                        }
+                    }
+
+                }
+            })
+
+        })
+        showMeBtn.addEventListener('click', () => {
+            dataEnglishHealthGrammar.forEach(item => {
+                if (item.id == idWord) {
+                    hiddentext.textContent = item.word
+                }
+            })
+            falls += 1;
+            fallAnswers.textContent = falls;
+        })
+
+        const timeOnStart = getTimestampInSeconds();
+        setEnglishWord(idWord, dataEnglishHealthGrammar)
     }
 }
 if (hasMedikamentVocabulary) {

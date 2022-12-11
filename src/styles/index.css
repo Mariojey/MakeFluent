@@ -18,7 +18,7 @@
 
 .main {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--black);
 }
 
@@ -167,34 +167,6 @@
     font-weight: 710;
 }
 
-@media (max-width: 738px) {
-    .card {
-        width: auto;
-        max-width: 350px;
-        align-items: flex-start;
-    }
-    .card:hover {
-        height: 600px;
-    }
-    .card .cardContent {
-        width: 100%;
-        left: 0;
-        padding: 30px;
-    }
-    .card img {
-        top: 70%;
-        left: 50%;
-        height: 320px;
-    }
-    .listOfChapters {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform-style: preserve-3d;
-    }
-}
-
 .listOfChapters {
     display: flex;
     justify-content: center;
@@ -290,6 +262,85 @@
     filter: blur(0px);
     transform: scale(1.1);
     opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+    /*
+    .card {
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+    }
+    .card:hover {
+        height: 600px;
+    }
+    .card .cardContent {
+        width: 100%;
+        left: 0;
+        padding: 30px;
+    }
+    .card img {
+        top: 70%;
+        left: 50%;
+        height: 320px;
+    }
+    */
+    .listOfChapters {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+    }
+    .cardChapter {
+        position: relative;
+        width: 80%;
+        height: 70vh;
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        color: black;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+    }
+    .iconChapter {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: chartreuse;
+        clip-path: circle(60px at center 0);
+        text-align: center;
+    }
+    .iconChapter i {
+        font-size: 2em;
+        padding: 20px 0;
+    }
+    .contentChapter {
+        position: absolute;
+        bottom: 2px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .contentChapter a {
+        text-decoration: none;
+        color: var(--black);
+    }
+    .listOfChapters:hover .cardChapter {
+        filter: blur(5px);
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    .listOfChapters .cardChapter:hover {
+        filter: blur(0px);
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
 }
 
 @keyframes moveLetter {}
