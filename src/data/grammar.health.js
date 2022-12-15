@@ -68,4 +68,33 @@ export default [{
         word: 'trap',
         translating: 'uwięzić',
     },
+    {
+        id: 14,
+        word: 'nosebleed',
+        translating: 'krwotok z nosa',
+    }, {
+        id: 15,
+        word: 'put a plaster on',
+        translating: 'przykleić plaster na',
+    }, {
+        id: 16,
+        word: 'przyłożyć lód do',
+        translating: 'put ice on',
+    }, {
+        id: 17,
+        word: 'użądlenie',
+        translating: 'sting',
+    }, {
+        id: 18,
+        word: 'stop the blood flowing',
+        translating: 'zatrzymać krwawienie',
+    }, {
+        id: 19,
+        word: 'sunburn',
+        translating: 'oparzenie słoneczne',
+    }, {
+        id: 20,
+        word: 'take antihistamine tablets',
+        translating: 'brac tabletki antyhistaminowe)',
+    },
 ]

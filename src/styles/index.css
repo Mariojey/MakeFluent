@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=DM+Mono&family=Inter:wght@400;600;700&family=Montserrat:wght@400;500&family=Nunito:wght@300;400&family=Poppins:wght@200;300&family=Quicksand:wght@300&family=Secular+One&family=Splash&display=swap');
 :root {
     --fontSize: 50px;
     --black: #000000;
@@ -13,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', Helvetica, sans-serif;
 }
 
 .main {
@@ -30,12 +31,13 @@
 
 .header {
     width: 100%;
-    min-height: 20vh;
+    min-height: 15vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
     justify-content: center;
+    font-size: 22px;
 }
 
 .titleLetter {
@@ -69,6 +71,7 @@
     display: flex;
     align-items: center;
     transition: 0.5s;
+    margin-bottom: 40px;
 }
 
 .card .circle {
@@ -273,11 +276,14 @@
 }
 
 @media (max-width: 1200px) {
-    /*
+    .header {
+        display: none;
+    }
     .card {
         width: auto;
         max-width: 350px;
         align-items: flex-start;
+        margin-bottom: 40px;
     }
     .card:hover {
         height: 600px;
@@ -292,7 +298,11 @@
         left: 50%;
         height: 320px;
     }
-    */
+    .card:hover img {
+        top: 70%;
+        left: 50%;
+        height: 320px;
+    }
     .listOfChapters {
         width: 100%;
         min-height: 100%;
