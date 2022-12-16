@@ -67,7 +67,7 @@ if (hasHealthReading) {
                             const time = timeOnStop - timeOnStart;
                             alert(time / 60)
                         } else {
-                            setEnglishWord(idWord, dataEnglishHealthListening)
+                            setEnglishWord(idWord, dataEnglishHealthReading)
                             insertWord.textContent = '';
                         }
                     }
