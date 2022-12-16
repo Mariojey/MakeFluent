@@ -78,12 +78,12 @@ export default [{
         translating: 'przykleić plaster na',
     }, {
         id: 16,
-        word: 'przyłożyć lód do',
-        translating: 'put ice on',
+        word: 'put ice on',
+        translating: 'przyłożyć lód do',
     }, {
         id: 17,
-        word: 'użądlenie',
-        translating: 'sting',
+        word: 'sting',
+        translating: 'użądlenie',
     }, {
         id: 18,
         word: 'stop the blood flowing',

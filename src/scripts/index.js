@@ -3,6 +3,8 @@ import dataGermany from '../data/data3.js'
 import dataEnglishHealthVocabulary from '../data/health.js'
 import dataEnglishHealthGrammar from '../data/grammar.health.js'
 import dataEnglishHealthListening from '../data/listening.health.js'
+import dataEnglishHealthReading from '../data/reading.health.js'
+
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
@@ -24,6 +26,7 @@ const hasHealthGrammar = new URLSearchParams(window.location.search).get("Englis
 const hasEarthVocabulary = new URLSearchParams(window.location.search).get("EnglishEarthVocabulary");
 const hasMedikamentVocabulary = new URLSearchParams(window.location.search).get("GermanyHealthVocabulary");
 const hasHealthListening = new URLSearchParams(window.location.search).get("EnglishHealthListening");
+const hasHealthReading = new URLSearchParams(window.location.search).get("EnglishHealthReading");
 
 console.log(hasHealthVocabulary);
 
@@ -45,6 +48,47 @@ function setGermanyWord(idWord, database) {
             textToTranslate.textContent = item.translating;
         }
     })
+}
+if (hasHealthReading) {
+    if (btnEnglish) {
+        console.log('hi');
+        btnEnglish.addEventListener('click', () => {
+            dataEnglishHealthReading.forEach(item => {
+                if (item.id == idWord) {
+                    if (insertWord.value == item.word) {
+                        correctAnswer += 1;
+                        isCorrect.textContent = "Poprawna odpowiedź";
+                        idWord += 1;
+                        console.log(idWord);
+                        console.log(correctAnswer);
+                        correctAnswers.textContent = correctAnswer;
+                        if (idWord > 122) {
+                            const timeOnStop = getTimestampInSeconds();
+                            const time = timeOnStop - timeOnStart;
+                            alert(time / 60)
+                        } else {
+                            setEnglishWord(idWord, dataEnglishHealthListening)
+                            insertWord.textContent = '';
+                        }
+                    }
+
+                }
+            })
+
+        })
+        showMeBtn.addEventListener('click', () => {
+            dataEnglishHealthReading.forEach(item => {
+                if (item.id == idWord) {
+                    hiddentext.textContent = item.word
+                }
+            })
+            falls += 1;
+            fallAnswers.textContent = falls;
+        })
+
+        const timeOnStart = getTimestampInSeconds();
+        setEnglishWord(idWord, dataEnglishHealthReading)
+    }
 }
 if (hasHealthListening) {
     if (btnEnglish) {
