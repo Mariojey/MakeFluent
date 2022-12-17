@@ -48,7 +48,7 @@ export default function checkWord(nameOfChapter,
                             console.log(correctAnswer);
                             correctAnswers.textContent = correctAnswer;
                             console.log();
-                            if (idWord > database.length) {
+                            if (idWord >= database.length) {
                                 const timeOnStop = getTimestampInSeconds();
                                 const time = timeOnStop - timeOnStart;
                                 textToTranslate.textContent = `To było ostatnie pytanie twój czas to: ${time}`
