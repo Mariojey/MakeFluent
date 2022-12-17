@@ -95,6 +95,6 @@ export default [{
     }, {
         id: 20,
         word: 'take antihistamine tablets',
-        translating: 'brac tabletki antyhistaminowe)',
+        translating: 'brac tabletki antyhistaminowe *ostatnie',
     },
 ]

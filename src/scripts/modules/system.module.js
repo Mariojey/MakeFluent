@@ -39,6 +39,7 @@ export default function checkWord(nameOfChapter,
                 database.forEach(item => {
                     if (item.id == idWord) {
                         if (insertWord.value == item.word) {
+                            hiddentext.textContent = ''
                             correctAnswer += 1;
                             console.log('Hello');
                             isCorrect.textContent = "Poprawna odpowiedź";
