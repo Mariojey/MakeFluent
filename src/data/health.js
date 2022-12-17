@@ -104,7 +104,7 @@ export default [{
     translating: 'mieć bolący palec',
 }, {
     id: 26,
-    word: 'I could`t believe my eyes',
+    word: `I could't believe my eyes`,
     translating: 'Nie mogłem uwierzyć własnym oczom',
 }, {
     id: 27,
