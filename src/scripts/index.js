@@ -19,9 +19,47 @@ const hiddentext = document.getElementById('hiddentext');
 const showMeBtn = document.getElementById('showMeBtn');
 const fallAnswers = document.getElementById('fallAnswers')
 
+/*
+let fallsdataEnglish1 = 0;
+let fallsdataEnglish = 0;
+let fallsdataGermany = 0;
+let fallsdataEnglishHealthVocabulary = 0;
+let fallsdataEnglishHealthGrammar = 0;
+let fallsdataEnglishHealthListening = 0;
+let fallsdataEnglishHealthReading = 0;
+let correctAnswerdataEnglish1 = 0;
+let correctAnswerdataEnglish = 0;
+let correctAnswerdataGermany = 0;
+let correctAnswerdataEnglishHealthVocabulary = 0;
+let correctAnswerdataEnglishHealthGrammar = 0;
+let correctAnswerdataEnglishHealthListening = 0;
+let correctAnswerdataEnglishHealthReading = 0;
+let idWorddataEnglish1 = 0;
+let idWorddataEnglish = 0;
+let idWorddataGermany = 0;
+let idWorddataEnglishHealthVocabulary = 0;
+let idWorddataEnglishHealthGrammar = 0;
+let idWorddataEnglishHealthListening = 0;
+let idWorddataEnglishHealthReading = 0;
+*/
+
 let falls = 0;
+let idWord = 0;
 let correctAnswer = 0;
-let idWord = 0
+
+//It should be modify that if system find in URL one of the variables search in localStorage 
+const localSavesVariablesSuffixes = [
+    `dataEnglishHealthVocabulary`,
+    `dataEnglishHealthGrammar`,
+    `dataEnglish`,
+    `dataEnglish1`,
+    `dataGermany`,
+    `dataEnglishHealthListening`,
+    `dataEnglishHealthReading`
+];
+
+
+
 
 const hasHealthVocabulary = new URLSearchParams(window.location.search).get("EnglishHealthVocabulary");
 const hasHealthGrammar = new URLSearchParams(window.location.search).get("EnglishHealthGrammar");
@@ -31,6 +69,89 @@ const hasMedikamentVocabulary = new URLSearchParams(window.location.search).get(
 const hasHealthListening = new URLSearchParams(window.location.search).get("EnglishHealthListening");
 const hasHealthReading = new URLSearchParams(window.location.search).get("EnglishHealthReading");
 
+const arrayOfURLParams = [
+    hasHealthVocabulary,
+    hasHealthGrammar,
+    hasEarthVocabulary,
+    hasEarthVocabulary1,
+    hasMedikamentVocabulary,
+    hasHealthListening,
+    hasHealthReading,
+]
+
+const arrayOfURLParamsNames = [
+    `hasHealthVocabulary`,
+    `hasHealthGrammar`,
+    `hasEarthVocabulary`,
+    `hasEarthVocabulary1`,
+    `hasMedikamentVocabulary`,
+    `hasHealthListening`,
+    `hasHealthReading`,
+]
+
+
+
+
+function getLocalSavesVariables(suffixOfVariableInStorage) {
+    console.log(`Test`);
+
+    for (let i = 0; i < localSavesVariablesSuffixes.length; i++) {
+
+        let probablyNameIdWord = `idWord${suffixOfVariableInStorage}`;
+        let probablyNameFalls = `falls${suffixOfVariableInStorage}`;
+        let probablyNameCorrectAnswer = `correctAnswer${suffixOfVariableInStorage}`;
+
+        if (localStorage.getItem(probablyNameIdWord) !== null) {
+            idWord = parseInt(localStorage.getItem(probablyNameIdWord))
+        }
+        if (localStorage.getItem(probablyNameFalls) !== null) {
+            falls = parseInt(localStorage.getItem(probablyNameFalls))
+        }
+        if (localStorage.getItem(probablyNameCorrectAnswer) !== null) {
+            correctAnswer = parseInt(localStorage.getItem(probablyNameCorrectAnswer))
+        }
+    }
+
+
+    /*
+    for (let i = 0; i < localSavesVariablesFalls.length; i++) {
+
+        if (localSavesVariablesFalls[i].includes(nameOfVariableInStorage)) {
+            if (localStorage.getItem(localSavesVariablesFalls[i]) !== null) {
+                console.log(`${localSavesVariablesFalls[i]}`);
+                falls = parseInt(localStorage.getItem(localSavesVariablesFalls[i]))
+                console.log(falls);
+            } else {
+                falls = 0;
+            }
+        }
+    }
+    for (let i = 0; i < localSavesVariablesCorrectAnswer.length; i++) {
+        if (localSavesVariablesCorrectAnswer[i].includes(nameOfVariableInStorage)) {
+
+            if (localStorage.getItem(localSavesVariablesCorrectAnswer[i]) !== null) {
+                correctAnswer = localStorage.getItem(localSavesVariablesCorrectAnswer[i])
+            } else {
+                correctAnswer = 0;
+            }
+        }
+
+    }
+    for (let i = 0; i < localSavesVariablesidWord.length; i++) {
+
+        if (localSavesVariablesidWord[i].includes(nameOfVariableInStorage)) {
+            if (localStorage.getItem(localSavesVariablesidWord[i]) !== null) {
+                idWord = parseInt(localStorage.getItem(localSavesVariablesidWord[i]))
+                console.log(`idWord ${idWord} ${localSavesVariablesidWord[i]}`);
+            } else {
+                idWord = 0;
+            }
+        }
+
+    }
+*/
+
+}
 
 
 function getTimestampInSeconds() {
@@ -53,6 +174,14 @@ function setGermanyWord(idWord, database) {
     })
 }
 
+for (let i = 0; i < arrayOfURLParams.length; i++) {
+    if (arrayOfURLParams[i]) {
+        getLocalSavesVariables(localSavesVariablesSuffixes[i])
+
+
+    }
+
+}
 
 checkWord(hasHealthReading,
     btnEnglish,
@@ -67,7 +196,8 @@ checkWord(hasHealthReading,
     showMeBtn,
     hiddentext,
     falls,
-    fallAnswers)
+    fallAnswers,
+    `dataEnglishHealthReading`)
 
 
 checkWord(hasHealthListening,
@@ -83,7 +213,8 @@ checkWord(hasHealthListening,
     showMeBtn,
     hiddentext,
     falls,
-    fallAnswers)
+    fallAnswers,
+    `dataEnglishHealthListening`)
 
 checkWord(hasHealthVocabulary,
     btnEnglish,
@@ -98,7 +229,8 @@ checkWord(hasHealthVocabulary,
     showMeBtn,
     hiddentext,
     falls,
-    fallAnswers)
+    fallAnswers,
+    `dataEnglishHealthVocabulary`)
 
 checkWord(hasHealthGrammar,
     btnEnglish,
@@ -113,7 +245,8 @@ checkWord(hasHealthGrammar,
     showMeBtn,
     hiddentext,
     falls,
-    fallAnswers)
+    fallAnswers,
+    `dataEnglishHealthGrammar`)
 
 checkWord(hasEarthVocabulary,
     btnEnglish,
@@ -128,7 +261,8 @@ checkWord(hasEarthVocabulary,
     showMeBtn,
     hiddentext,
     falls,
-    fallAnswers)
+    fallAnswers,
+    `dataEnglish`)
 
 checkWord(hasEarthVocabulary1,
     btnEnglish,
@@ -143,7 +277,8 @@ checkWord(hasEarthVocabulary1,
     showMeBtn,
     hiddentext,
     falls,
-    fallAnswers)
+    fallAnswers,
+    `dataEnglish1`)
 
 
 if (hasMedikamentVocabulary) {

@@ -6,7 +6,7 @@ export default [{
     {
         id: 1,
         word: 'eye drops',
-        translating: 'krople',
+        translating: 'krople do oczu',
     },
     {
         id: 2,
