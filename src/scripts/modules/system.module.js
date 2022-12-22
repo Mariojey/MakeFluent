@@ -54,7 +54,7 @@ export default function checkWord(isChapterSet,
                             if (idWord >= database.length) {
                                 const timeOnStop = getTimestampInSeconds();
                                 const time = timeOnStop - timeOnStart;
-                                textToTranslate.textContent = `To było ostatnie pytanie twój czas to: ${time}`
+                                textToTranslate.textContent = `To było ostatnie pytanie twój czas to: ${time} sekund`
                                 localStorage.removeItem(`idWord${dbName}`)
                                 localStorage.removeItem(`correctAnswer${dbName}`)
                                 localStorage.removeItem(`falls${dbName}`)

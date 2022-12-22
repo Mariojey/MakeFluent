@@ -7,6 +7,7 @@ import dataEnglishHealthListening from '../data/listening.health.js'
 import dataEnglishHealthReading from '../data/reading.health.js'
 
 import checkWord from './modules/system.module.js'
+import localSavesVariablesSuffixes from './utils/utils.js'
 
 const textToTranslate = document.getElementById('textToTranslate');
 const insertWord = document.getElementById('insertWord');
@@ -48,15 +49,7 @@ let idWord = 0;
 let correctAnswer = 0;
 
 //It should be modify that if system find in URL one of the variables search in localStorage 
-const localSavesVariablesSuffixes = [
-    `dataEnglishHealthVocabulary`,
-    `dataEnglishHealthGrammar`,
-    `dataEnglish`,
-    `dataEnglish1`,
-    `dataGermany`,
-    `dataEnglishHealthListening`,
-    `dataEnglishHealthReading`
-];
+
 
 
 
