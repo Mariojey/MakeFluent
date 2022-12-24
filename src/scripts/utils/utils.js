@@ -5,5 +5,6 @@ export default [
     `dataEnglish1`,
     `dataGermany`,
     `dataEnglishHealthListening`,
-    `dataEnglishHealthReading`
+    `dataEnglishHealthReading`,
+    `dataEnglishHealthUseOfEnglish`
 ];
