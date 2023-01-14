@@ -172,6 +172,7 @@
 
 .listOfChapters {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;

@@ -7,6 +7,7 @@ import dataEnglishHealthListening from '../data/listening.health.js'
 import dataEnglishHealthReading from '../data/reading.health.js'
 import dataEnglishHealthUseOfEnglish from '../data/useofenglish.health.js'
 import dataEnglishHealthWriting from '../data/writing.health.js'
+import dataEnglishHealthSpeaking from '../data/speaking.health'
 
 import checkWord from './modules/system.module.js'
 import localSavesVariablesSuffixes from './utils/utils.js'
@@ -65,6 +66,7 @@ const hasHealthListening = new URLSearchParams(window.location.search).get("Engl
 const hasHealthReading = new URLSearchParams(window.location.search).get("EnglishHealthReading");
 const hasHealthUseOfEnglish = new URLSearchParams(window.location.search).get("EnglishHealthUseOfEnglish")
 const hasHealthWriting = new URLSearchParams(window.location.search).get("EnglishHealthWriting")
+const hasHealthSpeaking = new URLSearchParams(window.location.search).get("EnglishHealthSpeaking")
 
 const arrayOfURLParams = [
     hasHealthVocabulary,
@@ -75,7 +77,8 @@ const arrayOfURLParams = [
     hasHealthListening,
     hasHealthReading,
     hasHealthUseOfEnglish,
-    hasHealthWriting
+    hasHealthWriting,
+    hasHealthSpeaking
 ]
 
 const arrayOfURLParamsNames = [
@@ -182,6 +185,22 @@ for (let i = 0; i < arrayOfURLParams.length; i++) {
     }
 
 }
+checkWord(hasHealthSpeaking,
+    btnEnglish,
+    btnGermany,
+    dataEnglishHealthSpeaking,
+    idWord,
+    insertWord,
+    correctAnswer,
+    correctAnswers,
+    isCorrect,
+    textToTranslate,
+    showMeBtn,
+    hiddentext,
+    falls,
+    fallAnswers,
+    `dataEnglishHealthSpeaking`)
+
 checkWord(hasHealthWriting,
     btnEnglish,
     btnGermany,
