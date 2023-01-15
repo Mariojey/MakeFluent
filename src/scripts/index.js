@@ -7,7 +7,7 @@ import dataEnglishHealthListening from '../data/listening.health.js'
 import dataEnglishHealthReading from '../data/reading.health.js'
 import dataEnglishHealthUseOfEnglish from '../data/useofenglish.health.js'
 import dataEnglishHealthWriting from '../data/writing.health.js'
-import dataEnglishHealthSpeaking from '../data/speaking.health'
+import dataEnglishHealthSpeaking from '../data/speaking.health.js'
 
 import checkWord from './modules/system.module.js'
 import localSavesVariablesSuffixes from './utils/utils.js'
