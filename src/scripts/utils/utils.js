@@ -7,5 +7,8 @@ export default [
     `dataEnglishHealthListening`,
     `dataEnglishHealthReading`,
     `dataEnglishHealthUseOfEnglish`,
-    `dataEnglishHealthWriting`
+    `dataEnglishHealthWriting`,
+    `dataEnglishHealthSpeaking`,
+    `dataEnglishEntertainVocabulary`,
+    `dataEnglishEntertainGrammar`,
 ];
