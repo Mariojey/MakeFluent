@@ -41,12 +41,12 @@ export default [{
     {
         id: 8,
         word: 'see a doctor',
-        translating: ''
+        translating: 'widzieć się z lekarzem'
     },
     {
         id: 9,
         word: 'stich',
-        translating: 'szew'
+        translating: 'szwa'
     },
     {
         id: 10,
