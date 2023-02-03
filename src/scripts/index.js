@@ -368,6 +368,21 @@ checkWord(hasEarthVocabulary1,
     fallAnswers,
     `dataEnglish1`)
 
+checkWord(hasMedikamentVocabulary,
+    btnEnglish,
+    btnGermany,
+    dataEnglish1,
+    idWord,
+    insertWord,
+    correctAnswer,
+    correctAnswers,
+    isCorrect,
+    textToTranslate,
+    showMeBtn,
+    hiddentext,
+    falls,
+    fallAnswers,
+    `dataGermany`)
 
 if (hasMedikamentVocabulary) {
     if (btnGermany) {
