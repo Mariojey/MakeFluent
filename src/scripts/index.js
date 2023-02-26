@@ -10,6 +10,7 @@ import dataEnglishHealthWriting from '../data/writing.health.js'
 import dataEnglishHealthSpeaking from '../data/speaking.health.js'
 import dataEnglishEntertainVocabulary from '../data/vocabulary.entertain.js'
 import dataEnglishEntertainGrammar from '../data/grammar.entertain.js'
+import dataEnglishEntertainListening from '../data/listening.entertain.js'
 
 import checkWord from './modules/system.module.js'
 import localSavesVariablesSuffixes from './utils/utils.js'
@@ -25,29 +26,7 @@ const hiddentext = document.getElementById('hiddentext');
 const showMeBtn = document.getElementById('showMeBtn');
 const fallAnswers = document.getElementById('fallAnswers')
 
-/*
-let fallsdataEnglish1 = 0;
-let fallsdataEnglish = 0;
-let fallsdataGermany = 0;
-let fallsdataEnglishHealthVocabulary = 0;
-let fallsdataEnglishHealthGrammar = 0;
-let fallsdataEnglishHealthListening = 0;
-let fallsdataEnglishHealthReading = 0;
-let correctAnswerdataEnglish1 = 0;
-let correctAnswerdataEnglish = 0;
-let correctAnswerdataGermany = 0;
-let correctAnswerdataEnglishHealthVocabulary = 0;
-let correctAnswerdataEnglishHealthGrammar = 0;
-let correctAnswerdataEnglishHealthListening = 0;
-let correctAnswerdataEnglishHealthReading = 0;
-let idWorddataEnglish1 = 0;
-let idWorddataEnglish = 0;
-let idWorddataGermany = 0;
-let idWorddataEnglishHealthVocabulary = 0;
-let idWorddataEnglishHealthGrammar = 0;
-let idWorddataEnglishHealthListening = 0;
-let idWorddataEnglishHealthReading = 0;
-*/
+
 
 let falls = 0;
 let idWord = 0;
@@ -71,6 +50,7 @@ const hasHealthWriting = new URLSearchParams(window.location.search).get("Englis
 const hasHealthSpeaking = new URLSearchParams(window.location.search).get("EnglishHealthSpeaking")
 const hasEntertainVocabulary = new URLSearchParams(window.location.search).get("EnglishEntertainVocabulary")
 const hasEntertainGrammar = new URLSearchParams(window.location.search).get("EnglishEntertainGrammar")
+const hasEntertainListening = new URLSearchParams(window.location.search).get("EnglishEntertainListening");
 
 const arrayOfURLParams = [
     hasHealthVocabulary,
@@ -84,19 +64,10 @@ const arrayOfURLParams = [
     hasHealthWriting,
     hasHealthSpeaking,
     hasEntertainVocabulary,
-    hasEntertainGrammar
+    hasEntertainGrammar,
+    hasEntertainListening
 ]
 
-const arrayOfURLParamsNames = [
-    `hasHealthVocabulary`,
-    `hasHealthGrammar`,
-    `hasEarthVocabulary`,
-    `hasEarthVocabulary1`,
-    `hasMedikamentVocabulary`,
-    `hasHealthListening`,
-    `hasHealthReading`,
-    `hasHealthUseOfEnglish`
-]
 
 
 
@@ -191,6 +162,22 @@ for (let i = 0; i < arrayOfURLParams.length; i++) {
     }
 
 }
+checkWord(hasEntertainListening,
+    btnEnglish,
+    btnGermany,
+    dataEnglishEntertainListening,
+    idWord,
+    insertWord,
+    correctAnswer,
+    correctAnswers,
+    isCorrect,
+    textToTranslate,
+    showMeBtn,
+    hiddentext,
+    falls,
+    fallAnswers,
+    `dataEnglishEntertainListening`)
+
 checkWord(hasEntertainGrammar,
     btnEnglish,
     btnGermany,

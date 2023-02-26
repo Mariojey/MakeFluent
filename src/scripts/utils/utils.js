@@ -11,4 +11,5 @@ export default [
     `dataEnglishHealthSpeaking`,
     `dataEnglishEntertainVocabulary`,
     `dataEnglishEntertainGrammar`,
+    `dataEnglishEntertainListening`
 ];
